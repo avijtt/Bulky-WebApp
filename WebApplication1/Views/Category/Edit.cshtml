@@ -1,34 +1,35 @@
 ﻿@model Category
 <form method="post">
+    <input asp-for="Id" hidden />
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary"> Create Category</h2>
+            <h2 class="text-primary"> Edit Category</h2>
             <hr />
         </div>
 
         @* summery error *@
         @* <div asp-validation-summary="All"></div> *@
 
-        <div class="mb-3 row p-1">   
-            <label asp-for="Name" class="p-0"></label> 
+        <div class="mb-3 row p-1">
+            <label asp-for="Name" class="p-0"></label>
             <input asp-for="Name" class="form-control" />
             @* server side validation *@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3 row p-1">
-            <label asp-for="DispalyOrder" class="p-0"></label> 
+            <label asp-for="DispalyOrder" class="p-0"></label>
             <input asp-for="DispalyOrder" class="form-control" />
             @* server side validation *@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
 
         <div class="row">
-           <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-outline-primary form-control">Create</button>
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-outline-primary form-control">Update</button>
 
-           </div>
-           <div class="col-6 col-md-3">
-                <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control" > List Back</a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control"> List Back</a>
 
             </div>
         </div>
@@ -36,8 +37,8 @@
 
 </form>
 
-            @* /add partial view doe client side validatiom *@
-@section Scripts{
+@* /add partial view doe client side validatiom *@
+@section Scripts {
     @{
         <partial name="_ValidationScriptsPartial" />
     }
