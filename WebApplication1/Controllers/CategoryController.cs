@@ -34,7 +34,7 @@ namespace WebApplication1.Controllers
                 _db.categories.Add(obj);
                 //save in database
                 _db.SaveChanges();
-                TempData["Success"] = "Category created successfully";
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");   
             }
            return View();
@@ -71,7 +71,7 @@ namespace WebApplication1.Controllers
                 _db.categories.Update(obj);
                 //save in database
                 _db.SaveChanges();
-                TempData["Success"] = "Category updated successfully";
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -107,7 +107,7 @@ namespace WebApplication1.Controllers
                 _db.categories.Remove(obj);
                 //save in database
                 _db.SaveChanges();
-            TempData["Success"] = "Category deleted successfully";
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
             
 
